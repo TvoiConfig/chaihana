@@ -25,6 +25,12 @@
 								<h6 class="tm-site-description">ул. Куйбышева, 50/150, Батайск</h6>	
 							</div>
 						</div>
+						<nav class="col-md-6 col-12 tm-nav">
+							<ul class="tm-nav-ul">
+								<li class="tm-nav-li"><a href="index.html" class="tm-nav-link active">Главная</a></li>
+								<li class="tm-nav-li"><a href="admin" class="tm-nav-link">Для сотрудников</a></li>
+							</ul>
+						</nav>	
 					</div>
 				</div>
 			</div>
@@ -120,57 +126,32 @@
 					</article>
 				</div> 
 			</div>
-			<div class="tm-section tm-container-inner">
+
+			<div class="tm-container-inner-2 tm-contact-section">
 				<div class="row">
-					<div class="col-md-6">
-						<div class="tm-description-box"> 
-							<div class="tm-container-inner-2 tm-contact-section">
-								<div class="row">
-									<div class="col-md-6">
-										<h4 class="tm-gallery-title">Бронирование столика</h4>
-										<p class="tm-mb-45">Чтобы записаться заполните форму ниже, мы перезвоним вам в течении минуты</p>
-										<form action="" method="post" class="text-lg">
-											{% csrf_token %}
-											{{ form|crispy }}
-											{# {% for f in form %} #}
-											{# <p><label class="input w-full bg-black border-b bg-opacity-0 text-white px-0 py-4 mb-4 tm-border-gold" for="{{ f.id_for_label }}">{{ f.label }}: </label>{{ f }} </p> #}
-											{# <div class="form-error">{{ f.errors }}</div> #}
-											{# {% endfor %} #}
-											<button class="tm-btn" type="submit" id="submit" onclick="clicks();">Записаться</button>
-										</form>
-									</div>
-									<div class="col-md-6">
-										<div class="tm-address-box">
-											<h4 class="tm-info-title tm-text-success">Our Address</h4>
-											<address>
-												180 Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus 10550
-											</address>
-											<a href="tel:080-090-0110" class="tm-contact-link">
-												<i class="fas fa-phone tm-contact-icon"></i>080-090-0110
-											</a>
-											<a href="mailto:info@company.co" class="tm-contact-link">
-												<i class="fas fa-envelope tm-contact-icon"></i>info@company.co
-											</a>
-											<div class="tm-contact-social">
-												<a href="https://fb.com/templatemo" class="tm-social-link"><i class="fab fa-facebook tm-social-icon"></i></a>
-												<a href="#" class="tm-social-link"><i class="fab fa-twitter tm-social-icon"></i></a>
-												<a href="#" class="tm-social-link"><i class="fab fa-instagram tm-social-icon"></i></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+					<div class="col-12 text-center">
+						<h4 class="tm-gallery-title">Бронирование столика</h4>
+						<p class="tm-mb-45">Чтобы забронировать столик заполните форму ниже, мы перезвоним вам в течении минуты</p>
+						<form action="" method="post" class="col-12 text-center">
+							{% csrf_token %}
+							{{ form|crispy }}
+							{# {% for f in form %} #}
+							{# <p><label class="input w-full bg-black border-b bg-opacity-0 text-white px-0 py-4 mb-4 tm-border-gold" for="{{ f.id_for_label }}">{{ f.label }}: </label>{{ f }} </p> #}
+							{# <div class="form-error">{{ f.errors }}</div> #}
+							{# {% endfor %} #}
+							<button class="tm-btn tm-btn-success tm-btn-right" type="submit" id="submit" onclick="clicks();">Записаться</button>
+						</form>
 					</div>
 				</div>
 			</div>
 		</main>
 
 		<footer class="tm-footer text-center">
-			<p>Все права защищены &copy; 2023 ИП "Лепесток"</p>
+			<p>Все права защищены &copy; 2023 ООО "Лепесток"</p>
 		</footer>
 	</div>
 	<script src="{% static 'js/jquery.min.js' %}"></script>
 	<script src="{% static 'js/parallax.min.js' %}"></script>
+	<script src="{% static 'js/alert.js'%}"></script>
 </body>
 </html>
